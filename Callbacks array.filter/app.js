@@ -1,16 +1,16 @@
-const btnEl = document.querySelector("#btn-el")
+// const btnEl = document.querySelector("#btn-el")
 
-async function getCards() {
-    const response = await fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
-    const data = await response.json()
-    console.log(data)
-}
+// async function getCards() {
+//     const response = await fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
+//     const data = await response.json()
+//     console.log(data)
+// }
 
-btnEl.addEventListener("click", getCards)
+// btnEl.addEventListener("click", getCards)
 
-setTimeout(()=> {
-    console.log(`I finally ran!`)
-}, 2000)
+// setTimeout(()=> {
+//     console.log(`I finally ran!`)
+// }, 2000)
 
 
 const people = [
@@ -20,8 +20,10 @@ const people = [
     { name: "Bob", hasPet: false },
 ]
 
-const peopleWithPets = people.filter((person)=> {
+function hasPets(person) {
     return person.hasPet
-})
+}
+
+const peopleWithPets = people.filter(hasPets)
 
 console.log(peopleWithPets)
