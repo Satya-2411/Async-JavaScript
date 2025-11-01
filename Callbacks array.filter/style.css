@@ -1,0 +1,9 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#btn-el {
+    padding: 7px 14px;
+    margin: 20px;
+}
